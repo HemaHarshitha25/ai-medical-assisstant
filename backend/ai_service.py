@@ -86,7 +86,7 @@ def analyze_report(text_content: str) -> str:
     """
     
     try:
-        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+        model = genai.GenerativeModel(model_name="gemini-2.0-flash")
         response = model.generate_content(prompt)
         
         # Strip markdown formatting if the model wraps it in ```json ... ```
