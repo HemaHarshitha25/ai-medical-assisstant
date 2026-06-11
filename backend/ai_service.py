@@ -52,7 +52,7 @@ def get_chat_response(messages_history: list, user_message: str) -> tuple[str, b
     
     try:
         model = genai.GenerativeModel(
-            model_name="gemini-1.5-flash",
+            model_name="gemini-2.0-flash",
             system_instruction=MEDICAL_SYSTEM_PROMPT
         )
         
@@ -113,7 +113,7 @@ def analyze_image(image_bytes, mime_type: str) -> str:
     """
     
     try:
-        model = genai.GenerativeModel(model_name="gemini-1.5-flash")
+        model = genai.GenerativeModel(model_name="gemini-2.0-flash")
         response = model.generate_content([
             {"mime_type": mime_type, "data": image_bytes},
             prompt
